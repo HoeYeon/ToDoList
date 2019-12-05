@@ -18,6 +18,7 @@
           document.getElementById('work').value = '' ">
         <script>
             var input = document.getElementById("work");
+            <!--엔터처리 -->
             input.addEventListener("keyup", function(event) {
               if (event.keyCode === 13) {
                event.preventDefault();
@@ -25,11 +26,11 @@
               }
             });
         </script>
-        <ol id="work_list"></ol>
+        <ul id="work_list"></ul>
       </div>
       <div class="done">
         <h3>Done</h3>
-        <ol id="done_list"></ol>
+        <ul id="done_list"></ul>
       </div>
     </div>
   </body>
