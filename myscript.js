@@ -6,11 +6,7 @@ function addData(data,id){
     tmp.className = 'check'
 
     elem.innerHTML=data;
-    elem.ondblclick = function(){
-      if(id == 'work_list')
-        addData(data,"done_list");
-      this.parentNode.parentNode.removeChild(this.parentNode);
-    };
+    elem.ondblclick = function(){deleteNode(elem,data,id)  };
 
     tmp.appendChild(elem);
     tmp.appendChild(createNewCheckboxt('name','id'))
@@ -24,4 +20,11 @@ function createNewCheckboxt(name, id){
     checkbox.name = name;
     checkbox.id = id;
     return checkbox;
+}
+
+function deleteNode(elem,data,id){
+  if(id == 'work_list')
+    addData(data,"done_list");
+  elem.parentNode.parentNode.removeChild(elem.parentNode);
+
 }
