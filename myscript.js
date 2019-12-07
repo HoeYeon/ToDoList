@@ -3,7 +3,7 @@ function addData(data,id){
     var mainList = document.getElementById(id);
     var elem = document.createElement("li");
     var tmp = document.createElement("div");
-    tmp.className = 'check'
+    tmp.className = 'check';
 
     elem.innerHTML=data;
     elem.ondblclick = function(){
@@ -13,7 +13,7 @@ function addData(data,id){
     };
 
     tmp.appendChild(elem);
-    tmp.appendChild(createNewCheckboxt('name','id'))
+    tmp.appendChild(createNewCheckboxt('name','id'));
     mainList.appendChild(tmp);
   }
 }
