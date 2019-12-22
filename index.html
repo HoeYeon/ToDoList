@@ -3,6 +3,7 @@
   <head>
     <div class="tmp">
       <h1 class = 'main'>ToDoList</h1>
+      <title> ToDoList </title>
     </div>
     <link rel="stylesheet" href="style.css">
     <script src='myscript.js'></script>
@@ -18,7 +19,7 @@
           document.getElementById('work').value = '' ">
         <script>
             var input = document.getElementById("work");
-            <!--엔터처리 -->
+            //엔터처리
             input.addEventListener("keyup", function(event) {
               if (event.keyCode === 13) {
                event.preventDefault();
