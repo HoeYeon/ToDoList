@@ -1,14 +1,22 @@
 .tmp{
   text-align: center;
+  display:inline-block;
+  border-bottom: 1px solid gray;
+  width:100%;
+  text-align: center;
+  font-size: 15px;
 }
 .main{
+  font-size:50px;
+  /*
   display:inline-block;
   border-bottom: 1px solid gray;
   width:100%;
   padding-bottom: 50px;
   text-align: center;
   font-size: 50px;
-  }
+  */
+}
   .check{
     display: grid;
     grid-template-columns: 1fr 1fr;
