@@ -3,21 +3,18 @@ function addData(data,id){
     let mainList = document.querySelector("#"+id);
     let elem = document.createElement("li");
     let tmp = document.createElement("div");
+    let check = createNewCheckbox();
     tmp.className = 'check';
 
     elem.innerHTML=data;
     elem.ondblclick = function(){deleteNode(elem,data,id);};
-
-    check = createNewCheckboxt();
-    //check.addEventListener("click",deleteNode(elem,data,id));
     check.onclick = function(){deleteNode(elem,data,id);};
     tmp.appendChild(elem);
     tmp.appendChild(check);
     mainList.appendChild(tmp);
   }
 }
-
-function createNewCheckboxt(){
+function createNewCheckbox(){
     let checkbox = document.createElement('input');
     checkbox.type= 'checkbox';
     // checkbox.name = name;

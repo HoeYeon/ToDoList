@@ -1,4 +1,4 @@
-.tmp{
+.header{
   text-align: center;
   display:inline-block;
   border-bottom: 1px solid gray;
@@ -8,14 +8,6 @@
 }
 .main{
   font-size:50px;
-  /*
-  display:inline-block;
-  border-bottom: 1px solid gray;
-  width:100%;
-  padding-bottom: 50px;
-  text-align: center;
-  font-size: 50px;
-  */
 }
   .check{
     display: grid;
