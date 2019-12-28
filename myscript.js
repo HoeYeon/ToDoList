@@ -1,3 +1,4 @@
+
 function addData(data,id){
   if(data != 'write your works' && data != '' ){
     let mainList = document.querySelector("#"+id);
@@ -26,6 +27,13 @@ function deleteNode(elem,data,id){
   if(id == 'work_list')
     addData(data,"done_list");
   elem.parentNode.parentNode.removeChild(elem.parentNode);
-
 }
 
+function listenEnter(){
+    const detectEnter = document.querySelector('#work');
+    detectEnter.addEventListener('keypress', function (e) {
+    if (e.key === "Enter") {
+      document.getElementById("myBtn").click();
+    }
+});
+}

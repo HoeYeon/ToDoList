@@ -6,25 +6,35 @@
   text-align: center;
   font-size: 15px;
 }
+.form,
+.greeting{
+  display:none;
+}
+.showing{
+  display:block;
+}
+.greeting{
+  color:#7f8c8d;
+}
 .main{
   font-size:50px;
 }
-  .check{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: right;
-  }
-  .list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-  }
-  #done_list{
-    text-decoration: line-through;
-  }
-  .todo{
-    text-align: center;
-  }
-  .done{
-    text-align: center;
-  }
+.check{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: right;
+}
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+#done_list{
+  text-decoration: line-through;
+}
+.todo{
+  text-align: center;
+}
+.done{
+  text-align: center;
+}

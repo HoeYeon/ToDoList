@@ -4,6 +4,10 @@
     <div class="header">
       <h1 class = 'main'>ToDoList</h1>
       <title> ToDoList </title>
+      <form class="js-form form">
+        <input type="text" placeholder="What is your name?"/>
+      </form>
+      <h2 class="js-greeting greeting"></h2>
       <div class="js-clock">
         <h1>00:00</h1>
       </div>
@@ -11,26 +15,21 @@
     <link rel="stylesheet" href="style.css">
     <script src='myscript.js'></script>
     <script src="clock.js"></script>  
+    <script src="greeting.js"></script>
   </head>
+
   <body> 
     <div class="list">
       <div class="todo">
         <h3>ToDo</h3>
         <input type="text" name="do" value="write your works" id="work" onclick="
-          this.value = '' ">
+          this.value = '' ;
+          listenEnter();
+        ">
         <input type="button" name="add" value="add" id="myBtn" onclick="
           addData(document.getElementById('work').value,'work_list');
-          document.getElementById('work').value = '' ">
-        <script>
-            var input = document.getElementById("work");
-            //엔터처리
-            input.addEventListener("keyup", function(event) {
-              if (event.keyCode === 13) {
-               event.preventDefault();
-               document.getElementById("myBtn").click();
-              }
-            });
-        </script>
+          document.getElementById('work').value = '';
+        ">
         <ul id="work_list"></ul>
       </div>
       <div class="done">
