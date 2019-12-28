@@ -6,12 +6,13 @@
   text-align: center;
   font-size: 15px;
 }
-.showing{
-  display:block;
-}
+
 .form,
 .greeting{
   display:none;
+}
+.showing{
+  display:block;
 }
 .greeting{
   color:#7f8c8d;
