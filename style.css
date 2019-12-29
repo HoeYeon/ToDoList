@@ -25,6 +25,9 @@
   grid-template-columns: 1fr 1fr;
   justify-items: right;
 }
+.checkbox{
+  margin: 3px -3px 3px 10px;
+}
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr;
