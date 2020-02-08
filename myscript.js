@@ -24,8 +24,8 @@ function addData(data,id){
 
     elem.innerHTML=data;
     elem.id = countID;
-    //elem.ondblclick = function(){deleteNode(elem,data,id);};
-    check.onclick = function(){deleteNode(elem,data,id);};
+    check.onclick = ()=>deleteNode(elem,data,id);
+    
     elem.appendChild(check);
     tmp.appendChild(elem);
     mainList.appendChild(tmp);
@@ -54,17 +54,17 @@ function deleteNode(elem,data,id){
   }
   elem.parentNode.parentNode.removeChild(elem.parentNode);
   const li = event.target.parentNode;
-    const cleanToDos = toDos.filter(function(toDo){
-      return toDo.ids !== parseInt(li.id);
-    })
-    toDos = cleanToDos;
-    saveToDo();
+  const cleanToDos = toDos.filter(toDo =>
+    toDo.ids !== parseInt(li.id)
+  );
+  toDos = cleanToDos;
+  saveToDo();
 }
 
 function listenEnter(){
     const detectEnter = document.querySelector('#work');
-    detectEnter.addEventListener('keypress', function (e) {
-    if (e.key === "Enter") {
+    detectEnter.addEventListener('keypress', event => {
+    if (event.key === "Enter") {
       document.getElementById("myBtn").click();
     }
 });
